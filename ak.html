@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payroll System</title>
+    <style>
+        body {
+            font-family:arial, sans-serif;
+            background-color: white;
+        }
 
+        .container {
+            width: 400px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color:white;
+            border-radius: 8px;
+            box-shadow: gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        label {
+            font-weight:bolder ;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        .checkbox-group {
+            margin-bottom: 15px;
+        }
+
+        .checkbox-group input {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: navy;
+        }
+
+        .result {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e6f2ff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Payroll System</h2>
+
+    <form>
+        <label>Employee Name:</label>
+        <input type="text" name="ename" required>
+
+        <label>Employee ID:</label>
+        <input type="text" name="eid" required>
+
+        <label>Department:</label>
+        <select name="dept">
+            <option>HR</option>
+            <option>Finance</option>
+            <option>IT</option>
+            <option>Marketing</option>
+        </select>
+
+        <label>Basic Salary:</label>
+        <input type="number" name="salary">
+
+        <label>Allowances:</label>
+        <div class="checkbox-group">
+            <input type="checkbox"> HRA <br>
+            <input type="checkbox"> DA <br>
+            <input type="checkbox"> Travel Allowance
+        </div>
+
+        <label>Deductions:</label>
+        <div class="checkbox-group">
+            <input type="checkbox"> PF <br>
+            <input type="checkbox"> Tax
+        </div>
+
+        <label>Net Salary:</label>
+        <input type="number" placeholder="Enter calculated net salary">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="result">
+        <p><b>Note:</b> Net salary must be calculated manually since JavaScript is not used.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
